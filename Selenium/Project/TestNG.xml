@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Alchemy LMS Test Suite">
+    <test name="testngTest">
+        <classes>
+            <class name="LMS_Activities.Activity1" />
+            <class name="LMS_Activities.Activity2" />
+            <class name="LMS_Activities.Activity3" />
+            <class name="LMS_Activities.Activity4" />
+            <class name="LMS_Activities.Activity5" />
+            <class name="LMS_Activities.Activity6" />
+            <class name="LMS_Activities.Activity7" />
+            <class name="LMS_Activities.Activity8" />
+            <class name="LMS_Activities.Activity9" />
+
+        </classes>
+    </test>
+</suite>

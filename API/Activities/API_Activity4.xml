@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="9dc3f8b8-c192-478c-8f83-37fcd5b708eb" created="3.30.0" activeEnvironment="Default environment" name="REST Project 1_Activity4" resourceRoot="" updated="3.30.0 2022-03-16T13:04:41Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="7e46107e-aa80-47ad-aded-61f96d478d3e" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://ipwhois.app" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://ipwhois.app</con:endpoint>
+    </con:endpoints>
+    <con:resource name="IP" path="/json/{IP}" id="57693805-abb3-4b12-80f3-50cbb4c0f6eb">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="IP" id="037fbe0f-01ca-4a80-9618-e3bed257f77c" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>IP</con:name>
+            <con:value/>
+            <con:style>TEMPLATE</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json; charset=utf-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:json="http://ipwhois.app/json/">json:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="6dcb8240-5cb9-4f3b-aaa3-4a65cdeb45d5" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://ipwhois.app</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://ipwhois.app/json/</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="IP" value="${DataSource#address}"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>IP</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="02949f74-b565-4d72-8597-a3eca725745b" name="http://ipwhois.app Test Suite">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="b8f38f96-bad4-474b-9297-0bb3902782d1" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="http://ipwhois.app Test Case 1" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="datasource" name="Data Source" id="9a81e2f3-5473-4486-acf7-6ade467d9052">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="File">
+            <con:configuration>
+              <fileName>C:/Users/002UBF744/Downloads/DSFile.txt</fileName>
+              <separator>,</separator>
+              <trim>true</trim>
+              <charset>Cp1252</charset>
+              <quotedValues>false</quotedValues>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>Form editor is not applicable for this request</con:property>
+          <con:property>address</con:property>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="Data Source 2" id="a45493d4-ae14-4c53-b586-0bf10cd28489">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Data Generator">
+            <con:configuration>
+              <generatedDataCount>10</generatedDataCount>
+              <generatorsTotalNumber>1</generatorsTotalNumber>
+              <lastSelectedProperty>-1</lastSelectedProperty>
+              <GeneratorType0>CUSTOM</GeneratorType0>
+              <PropertyName0>Form editor is not applicable for this request</PropertyName0>
+              <repetitionCountForm33611c16f9d845a98cfd45a5920f3349editor33611c16f9d845a98cfd45a5920f3349is33611c16f9d845a98cfd45a5920f3349not33611c16f9d845a98cfd45a5920f3349applicable33611c16f9d845a98cfd45a5920f3349for33611c16f9d845a98cfd45a5920f3349this33611c16f9d845a98cfd45a5920f3349request>0</repetitionCountForm33611c16f9d845a98cfd45a5920f3349editor33611c16f9d845a98cfd45a5920f3349is33611c16f9d845a98cfd45a5920f3349not33611c16f9d845a98cfd45a5920f3349applicable33611c16f9d845a98cfd45a5920f3349for33611c16f9d845a98cfd45a5920f3349this33611c16f9d845a98cfd45a5920f3349request>
+              <repeatValuesForm33611c16f9d845a98cfd45a5920f3349editor33611c16f9d845a98cfd45a5920f3349is33611c16f9d845a98cfd45a5920f3349not33611c16f9d845a98cfd45a5920f3349applicable33611c16f9d845a98cfd45a5920f3349for33611c16f9d845a98cfd45a5920f3349this33611c16f9d845a98cfd45a5920f3349request>false</repeatValuesForm33611c16f9d845a98cfd45a5920f3349editor33611c16f9d845a98cfd45a5920f3349is33611c16f9d845a98cfd45a5920f3349not33611c16f9d845a98cfd45a5920f3349applicable33611c16f9d845a98cfd45a5920f3349for33611c16f9d845a98cfd45a5920f3349this33611c16f9d845a98cfd45a5920f3349request>
+              <CustomStringDataGeneratorFormatForm33611c16f9d845a98cfd45a5920f3349editor33611c16f9d845a98cfd45a5920f3349is33611c16f9d845a98cfd45a5920f3349not33611c16f9d845a98cfd45a5920f3349applicable33611c16f9d845a98cfd45a5920f3349for33611c16f9d845a98cfd45a5920f3349this33611c16f9d845a98cfd45a5920f3349request>%STR(5,10,True,True,True,True)</CustomStringDataGeneratorFormatForm33611c16f9d845a98cfd45a5920f3349editor33611c16f9d845a98cfd45a5920f3349is33611c16f9d845a98cfd45a5920f3349not33611c16f9d845a98cfd45a5920f3349applicable33611c16f9d845a98cfd45a5920f3349for33611c16f9d845a98cfd45a5920f3349this33611c16f9d845a98cfd45a5920f3349request>
+              <escapeSpaceSequence>33611c16f9d845a98cfd45a5920f3349</escapeSpaceSequence>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>false</con:shared>
+          <con:restartShared>false</con:restartShared>
+          <con:property>Form editor is not applicable for this request</con:property>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Request 1" id="42653dbf-0747-40cd-a4cd-eb2c50077348">
+        <con:settings/>
+        <con:config service="http://ipwhois.app" resourcePath="/json/{IP}" methodName="IP" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="6dcb8240-5cb9-4f3b-aaa3-4a65cdeb45d5" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://ipwhois.app</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://ipwhois.app/json/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="7ea8a513-3390-413c-9722-55a5cc2ec9fa" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="9b9a9982-5a81-4232-9083-292dc4d052ef" name="JSONPath Match">
+              <con:configuration>
+                <path>$['country']</path>
+                <content>"India"</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="IP" value="${DataSource#address}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>IP</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="Data Source Loop" id="39f660d8-003b-4891-8e5a-33ee9a791ef7">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>Data Source</dataSourceStep>
+          <targetStep>Request 1</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="jdbc" name="JDBC Request" id="2e83957d-587f-4e3a-9557-4aee9c37906d">
+        <con:settings>
+          <con:setting id="prettyPrintResponse">true</con:setting>
+        </con:settings>
+        <con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dbConnectionName>Default</con:dbConnectionName>
+          <con:driver>com.mysql.jdbc.Driver</con:driver>
+          <con:connectionString>jdbc:mysql://remotemysql.com:3306/CGpfjlbstY?user=CGpfjlbstY&amp;password=PASS_VALUE</con:connectionString>
+          <con:password>Sav3dVDTJ4</con:password>
+          <con:connectionProperties/>
+          <con:query/>
+          <con:properties/>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer>
+    <con:databaseConnection>
+      <con:name>Default</con:name>
+      <con:driver>com.mysql.jdbc.Driver</con:driver>
+      <con:connectionString>jdbc:mysql://remotemysql.com:3306/CGpfjlbstY?user=CGpfjlbstY&amp;password=PASS_VALUE</con:connectionString>
+      <con:password>Sav3dVDTJ4</con:password>
+      <con:connectionProperties/>
+    </con:databaseConnection>
+  </con:databaseConnectionContainer>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:reportTemplates/>
+    <con:xmlTemplates/>
+    <con:xmlTemplates/>
+    <con:parameters/>
+    <con:parameters/>
+  </con:reporting>
+  <con:reporting/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
